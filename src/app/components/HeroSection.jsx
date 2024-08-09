@@ -1,33 +1,38 @@
-"use client";;
+"use client";
+
 import React from 'react';
 import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section>
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
-            <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>Advogada Thais e Roberto</h1>
-            <p className='text-[#BCBBC2] text-base sm:text-lg mb-6 lg:text-xl'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, mollitia blanditiis! Consectetur blanditiis
-                eveniet cumque commodi, ducimus dolor veritatis harum non quis! Repudiandae nostrum odio neque. Tempora corrupti ab quasi!
+    <section className="z-10 bg-gray-100 px-40 py-36 gap-40">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2 order-2 md:order-1">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
+            Thais Davi Rosenau — Advogada Previdenciária
+            </h1>
+            <p className="text-lg text-gray-600 mb-6">
+            Atuando de forma séria e transparente com benefícios e aposentadorias do INSS
             </p>
-            <div>
-              <button className='px-10 py-6 w-full sm:w-fit rounded-none mr-2 bg-[#FFBF00] hover:bg-slate-300 text-black'>ENTRE EM CONTATO →</button>
+            <div className="flex space-x-4">
+              <button className="px-8 py-3 bg-[#4A3AFF] hover:bg-[#2a3679] text-white font-bold rounded-md">Saiba mais → </button>
+              <button className="px-8 py-3 bg-gray-300 hover:bg-gray-400 text-gray-900 font-bold rounded-md">Entrar em contato </button>
             </div>
-        </div>
-          <div className='col-span-5 place-self-center mt-4 lg:mt-1'>
-          <div className="rounded bg-[#FFBF00] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-          <img src="images/justica.png"
-          className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
-           alt="justice"
-           width={390}
-           height={390} />
           </div>
+          <div className="md:w-1/2 order-1 md:order-2 mt-8 md:mt-8">
+            <Image
+              src="/images/hero.png"
+              alt="Company Image"
+              width={920}
+              height={740}
+              className="rounded-lg shadow-md"
+            />
           </div>
         </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
